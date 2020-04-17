@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styles from './index.module.css'
+import SpotifyIcon from './../svgs/spotify.svg'
 
 export interface HelloProps { name: string }
 export const greeting = (name: string) => `Hello, ${name}`
-export const Hello = ({ name }: HelloProps) => <div className={styles.name}>{greeting(name)}</div>
+export const Hello = ({ name }: HelloProps) => {
+  return (
+    <Fragment>
+      <div className={styles.name}>{greeting(name)}</div>
+      <SpotifyIcon />
+    </Fragment>
+  )
+}
