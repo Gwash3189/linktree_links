@@ -8,8 +8,8 @@
     "test:watch": "jest test --watch",
     "test:coverage": "jest test --coverage",
     "clean": "rm -rf dist/*",
-    "build": "npm run clean && cp static/index.html dist/ && webpack",
-    "start": "npm run clean && cp static/index.html dist/ && webpack-dev-server --open",
+    "build": "npm run clean && cp static/* dist/ && webpack",
+    "start": "npm run clean && cp static/* dist/ && webpack-dev-server --open",
     "lint": "eslint --ext .ts,.tsx src --color",
     "lint:fix": "npm run lint -- --fix"
   },
