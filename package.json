@@ -62,7 +62,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/test/support/style-setup.js"
+      "\\.(css|less)$": "<rootDir>/test/support/style-setup.js",
+      "\\.(svg)$": "<rootDir>/test/support/svg-setup.js"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/test/support/enzyme-setup.js"
