@@ -33,5 +33,8 @@ export interface ShowDefinition {
 }
 
 export interface ShowLinkDefinition extends LinkDefinition {
-  shows: Array<ShowDefinition>
+  shows: Array<ShowDefinition>,
+  text: string
+}
+
 }
