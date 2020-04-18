@@ -26,3 +26,100 @@
   width: 100%;
   padding-bottom: 15px;
 }
+
+.showButton {
+  composes: button;
+}
+
+.showButtonActive {
+  composes: button;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.showButtonContainerOpen {
+  composes: container;
+  padding-bottom: 0px;
+}
+
+.showButtonContainerClosed {
+  composes: container
+}
+
+.showContentPadding {
+  padding-bottom: 15px;
+}
+
+.showContentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.showContent {
+  background: #f5f7f8;
+  width: 327px;
+}
+
+.showContent:hover {
+  background: #f1f1f1
+}
+
+.showBorder {
+  border-bottom: 1px solid #dadee0;
+}
+
+.showText {
+  width: 100%;
+}
+
+.showDate {
+  font-size: 16px;
+  height: 28px;
+  margin: 0;
+  margin-top: 10px
+}
+
+.showLocation {
+  font-size: 12px;
+  height: 24px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.showInformation {
+  float: left;
+  padding-left: 15px;
+  height: 100%
+}
+
+.showArrow {
+  float: right;
+  height: 100%;
+  padding-right: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.soldOutText {
+  composes: showArrow;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: right;
+}
+
+.songKickContainer {
+  composes: showContentContainer;
+  cursor: default;
+}
+
+.songKickContent {
+  background: #f5f7f8;
+  width: 327px;
+  height: 32px;
+  text-align: center;
+  padding-top: 16px;
+}

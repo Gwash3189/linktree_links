@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react'
 
-import { LinkButton } from './LinkButton'
-
-type LinkDefinition = {
-  href: string,
-  text: string
-}
+import { ClassicLink } from './ClassicLink'
+import { ShowLink } from './ShowLink'
+import {
+  LinkDefinition,
+  ClassicLinkDefinition,
+  ShowLinkDefinition,
+  LinkType,
+  isLinkType,
+} from './types'
 
 type Props = {
   links: Array<LinkDefinition>
@@ -17,12 +20,24 @@ type Props = {
 // if the elements shift, then it can cause unnecessary
 // re-renders
 
+const renderClassicLink = (item: ClassicLinkDefinition, index: number) => (
+  <ClassicLink key={index} link={item.href}>
+    {item.children}
+  </ClassicLink>
+)
+
+const renderShowLink = (item: ShowLinkDefinition, index: number) => (
+  <ShowLink key={index} shows={item.shows} />
+)
+
 export const Tree = (props: Props) => (
   <Fragment>
-    {props.links.map((definition, index) => (
-      <LinkButton key={index} link={definition.href}>
-        {definition.text}
-      </LinkButton>
-    ))}
+    {props.links.map((definition: LinkDefinition, index) => {
+      if (isLinkType(definition, LinkType.classic)) {
+        return renderClassicLink(definition as ClassicLinkDefinition, index)
+      }
+
+    return renderShowLink(definition as ShowLinkDefinition, index)
+    })}
   </Fragment>
 )

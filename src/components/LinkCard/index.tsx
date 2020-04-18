@@ -4,40 +4,17 @@ import { LinkDisplay } from '../LinkDisplay'
 import { Profile } from '../Profile'
 import { Tree } from '../Tree'
 import { Logo } from '../Logo'
+import { LinkDefinition } from '../Tree/types'
 
+type Props = {
+  links: Array<LinkDefinition>
+}
 
-const links = [
-  {
-    href: '#',
-    text: 'New Link',
-  },
-  {
-    href: '#',
-    text: 'Another Link',
-  },
-  {
-    href: '#',
-    text: 'One More Link',
-  },
-  {
-    href: '#',
-    text: 'Fourth Link',
-  },
-  {
-    href: '#',
-    text: 'Fifth Link',
-  },
-  {
-    href: '#',
-    text: 'Link Strikes Again',
-  },
-]
-
-export const LinkCard = () => (
+export const LinkCard = (props: Props) => (
   <Fragment>
     <LinkDisplay>
       <Profile />
-      <Tree links={links}/>
+      <Tree links={props.links}/>
       <Logo />
     </LinkDisplay>
   </Fragment>
