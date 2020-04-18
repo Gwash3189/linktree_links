@@ -49,6 +49,7 @@ export const links: PreloadedLinks = {
         },
       ],
       type: LinkType.show,
+      text: 'Upcoming Gigs',
     },
     {
       href: '#',
