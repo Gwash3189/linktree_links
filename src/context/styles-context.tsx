@@ -10,6 +10,11 @@ const defaultStyles = () => ({
   textColor: '',
 })
 
+// TODO
+// Using a context here allows me to avoid props drilling user information
+// down to the avatar and username level. It also allows me to lean onto
+// the hooks API that react provides
+
 const StylesContext = React.createContext<StylesData>(defaultStyles())
 
 export const useStyles = (): [StylesData, Function] => {

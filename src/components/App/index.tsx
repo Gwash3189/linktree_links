@@ -1,5 +1,9 @@
 import React from 'react'
-
+// TODO
+// I've chosen to put all "external" libraries at the top of files
+// and all of the internal stuff lower down, spaced by one new line.
+// I feel this creates an easy to read distinction of what is ours
+// and what is theirs
 import styles from './styles.module.css'
 import { LinkContainer } from '../LinkContainer'
 import { LinkCard } from '../LinkCard'

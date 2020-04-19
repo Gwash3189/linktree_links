@@ -1,5 +1,10 @@
 import React from 'react'
 
+// TODO
+// Using a context here allows me to avoid props drilling user information
+// down to the avatar and username level. It also allows me to lean onto
+// the hooks API that react provides
+
 export type UserData = {
   username: string,
   avatar: string

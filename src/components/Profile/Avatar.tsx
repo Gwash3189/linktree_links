@@ -7,5 +7,5 @@ type Props = {
 }
 
 export const Avatar = (props: Props) => (
-    <img className={styles.image} src={props.src} />
+  <img className={styles.image} src={props.src} />
 )

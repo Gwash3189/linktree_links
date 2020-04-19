@@ -40,6 +40,14 @@ const renderShowLink = (item: ShowLinkDefinition, index: number) => (
 export const Tree = (props: Props) => (
   <Fragment>
     {props.links.map((definition: LinkDefinition, index) => {
+      // TODO
+      // I'm not sure I'm a fan of this if-else style of logic I
+      // have here. It's not scaleable to a large number of link types.
+      // I feel like there is a better solution, but what that is I'm unsure.
+      // I don't feel like using a switch statment is the right way to go.
+      // I'd probably reach out to another engineering, or the group as a whole,
+      // to see if anyone had any other ideas that are worth looking into
+
       if (isLinkType(definition, LinkType.classic)) {
         return renderClassicLink(definition as ClassicLinkDefinition, index)
       }
