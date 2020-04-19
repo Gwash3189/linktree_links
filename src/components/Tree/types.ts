@@ -37,4 +37,20 @@ export interface ShowLinkDefinition extends LinkDefinition {
   text: string
 }
 
+export enum MusicPlatform {
+  spotify = 'spotify',
+  bandcamp = 'bandcamp'
+}
+
+export type MusicPlatforms = {
+  platform: MusicPlatform,
+  href: string
+}
+
+export interface MusicLinkDefinition extends LinkDefinition {
+  text: string,
+  thumbnail: string,
+  songName: string,
+  artistName: string,
+  platforms: Array<MusicPlatforms>
 }

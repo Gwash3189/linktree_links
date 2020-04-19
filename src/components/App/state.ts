@@ -1,5 +1,18 @@
 import { PreloadedLinks } from './types'
-import { LinkType } from '../Tree/types'
+import { LinkType, MusicPlatform } from '../Tree/types'
+import { UserData } from '../../context/user-context'
+import { avatar } from './avatar-state'
+import { StylesData } from '../../context/styles-context'
+
+export const stylesData: StylesData = {
+  backgroundColour: '#39e09b',
+  textColor: '#263238',
+}
+
+export const userData: UserData = {
+  username: '@cordellcrust',
+  avatar,
+}
 
 export const links: PreloadedLinks = {
   classic: [
@@ -55,6 +68,19 @@ export const links: PreloadedLinks = {
       href: '#',
       children: 'New Link',
       type: LinkType.classic,
+    },
+  ],
+  music: [
+    {
+      type: LinkType.music,
+      text: 'Demo',
+      thumbnail: '',
+      songName: 'Untitled',
+      artistName: 'Cordell',
+      platforms: [{
+        platform: MusicPlatform.bandcamp,
+        href: '',
+      }],
     },
   ],
 }

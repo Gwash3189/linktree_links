@@ -1,3 +1,8 @@
+/* TODO */
+/* I believe there is a more "official" way to do global styles */
+/* with css-modules. However, I felt that this was good enough  */
+/* given the scope of this assesment */
+
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 .app {

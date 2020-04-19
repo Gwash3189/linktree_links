@@ -8,7 +8,8 @@ import {
 } from './types'
 
 type Props = {
-  shows: Array<ShowDefinition>
+  shows: Array<ShowDefinition>,
+  text: string
 }
 
 const renderShows = (details: Array<ShowDefinition>) => {
@@ -69,7 +70,7 @@ export const ShowLink = (props: Props) => {
     <Fragment>
       <div className={containerStyles}>
         <ButtonLink className={buttonStyles} onClick={onClickHandler}>
-          Shows
+          {props.text}
         </ButtonLink>
       </div>
       {isOpen && renderShows(props.shows)}
