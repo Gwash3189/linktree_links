@@ -12,11 +12,11 @@
 }
 
 /* TODO */
-/* I added this hover effect here purely  */
-/* because I thought it looked nice */
+/* the README says that all buttons invert */
+/* when hovered, but I wasn't sure how much */
 
 .button:hover {
-  background: #36d391
+  filter: invert(0.1);
 }
 
 .container {
@@ -64,7 +64,7 @@
 }
 
 .showContent:hover {
-  background: #f1f1f1
+  filter: invert(0.05);
 }
 
 .showBorder {

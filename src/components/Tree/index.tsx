@@ -20,14 +20,21 @@ type Props = {
 // if the elements shift, then it can cause unnecessary
 // re-renders
 
+// TODO
+// This directory is getting really noisy.
+// If this was a production level codebase, I would clean it up.
+// I would separate "Show" related links out into their own sub-directory
+// I would also move all "Show" styles out into their own `styles.module.css` file
+
+
 const renderClassicLink = (item: ClassicLinkDefinition, index: number) => (
-  <ClassicLink key={index} link={item.href}>
-    {item.children}
-  </ClassicLink>
+    <ClassicLink key={index} link={item.href}>
+      {item.children}
+    </ClassicLink>
 )
 
 const renderShowLink = (item: ShowLinkDefinition, index: number) => (
-  <ShowLink key={index} shows={item.shows} />
+  <ShowLink key={index} {...item} />
 )
 
 export const Tree = (props: Props) => (
@@ -37,7 +44,7 @@ export const Tree = (props: Props) => (
         return renderClassicLink(definition as ClassicLinkDefinition, index)
       }
 
-    return renderShowLink(definition as ShowLinkDefinition, index)
+      return renderShowLink(definition as ShowLinkDefinition, index)
     })}
   </Fragment>
 )
