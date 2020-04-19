@@ -36,8 +36,10 @@ A local blackmetal / grindcore band that my brother is in. I thought it might be
 
 # Why haven't you implemented the Music Links?
 
-I felt that there weren't many differences between the `Shows` and `Music` links, technically. The most interesting bit of
-of the designs were around the song preview, and the UX of clicking on a row or logo
+I felt that there weren't many differences between the `Shows` and `Music` links, technically speaking.
+The most interesting bit of the designs were around the song preview, and the UX of clicking on a row or logo.
+I felt that it might be more useful to have a discussion about this feature, as the implementation does not deviate
+that much from what is present in the repository now.
 
 ## Clicking on a Row or Logo
 
@@ -46,14 +48,16 @@ would result in the same action being taken. However, when reading the README it
 different things. Clicking on the logo changes the player where as clicking on the row opens the song in that service.
 
 I feel that this goes against the typical design language of the mobile web, as I feel it is a standard expectation of mobile
-interfaces to see a "row" containing some data and a `>` character and expect that clicking on the entire row does one thing.
+interfaces to see a "row" containing some data and a `>` character and expect that clicking on the entire row does one thing; such as taking the user to a different place.
 
-Additionally, I feel that it is odd for clicking an element that is lower in the hierarchy to effect a group of elements higher
-than it. With most languages and reading habits people have come to that the flow of information continues left to right (or right to left), and then downward. I feel that by go against ingrained reading habits, we are creating a less than smooth UX.
+Additionally, I feel that it is odd that when clicking an element that is lower in the hierarchy to effect a
+group of elements higher than it. With most languages and reading habits, people have come to expect that the
+flow of information continues left to right (or right to left), and then downward. I feel that by going against
+these ingrained reading habits, we are creating a jarring UX.
 
 ## My suggestion
 
-My suggestion to adjust the UX on selecting a platform would be that
+My suggestion to adjust the UX on the music links
 
 1. The entire row performs one action. It directs the user to that song in the chosen streaming service.
 2. The music player at the top plays a 30 second preview of that song
