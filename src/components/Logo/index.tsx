@@ -1,10 +1,11 @@
 import React from 'react'
 
+import { Container } from '../Container'
 import LogoImage from '../../svgs/logo.svg'
 import styles from './styles.module.css'
 
 export const Logo = () => (
-  <div className={styles.container}>
+  <Container className={styles.container}>
     <LogoImage />
-  </div>
+  </Container>
 )
